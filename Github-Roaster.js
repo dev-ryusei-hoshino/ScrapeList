@@ -1,7 +1,8 @@
 /*
- * GitRoasted Scraper
+ * Github Profile Roaster
  *
- * Base: https://imageprompt.org/api/ai/prompts/image
+ * Author: Ryusei Hoshino (https://github.com/dev-ryusei-hoshino)
+ * Base: https://gitroasted.netlify.app/
  * Source: https://whatsapp.com/channel/0029VbDnVYyK0IBjO8RGfq3N
  *
  * Note: Jangan di hapus we em nya, hargai dev-scraper kecil! >:(
