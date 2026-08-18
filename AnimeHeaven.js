@@ -5,9 +5,7 @@
  * Base: https://animeheaven.me
  * Source: https://whatsapp.com/channel/0029VbDnVYyK0IBjO8RGfq3N
  *
- * Note:
- * > DOSA DITANGGUNG MASING - MASING! JANGAN SALAHIN ADMIN ;)
- * > Jangan di hapus we em nya, hargai dev-scraper kecil! >:(
+ * Note: Jangan di hapus we em nya, hargai dev-scraper kecil! >:(
  */
 
 import axios from "axios";
