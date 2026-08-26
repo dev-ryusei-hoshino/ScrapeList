@@ -49,8 +49,8 @@ async function scrape(url) {
 
 /* EXAMPLE USAGE:
  * (async () => {
- *   const res = await scrape("https://vt.tiktok.com/ZS4geUA7K");
- *   const res = await scrape("https://vt.tiktok.com/ZS4y5vc3F")
+ *   const res = await scrape("https://vt.tiktok.com/ZS4geUA7K"); // video
+ *   const res = await scrape("https://vt.tiktok.com/ZS4y5vc3F"); // slider
  *   console.log(res);
  * })();
  */
