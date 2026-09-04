@@ -1,5 +1,5 @@
 /*
- * Otaku Desu
+ * OtakuDesu - nonton anime
  *
  * Author: Ryusei Hoshino (https://github.com/dev-ryusei-hoshino)
  * Base: https://otakudesu.blog/
@@ -516,8 +516,7 @@ async function watch(url) {
       next,
       animeUrl,
       embedIframe,
-      mirrors,
-      streams,
+      mirrors: streams,
     };
   } catch (e) {
     console.error(e);
@@ -563,25 +562,23 @@ async function upcoming() {
 }
 
 // Usage examples:
-// (async () => {
-//   const homeResult = await home();
-//   console.log(homeResult);
-//
-//   const searchResult = await search("mahiro");
-//   console.log(searchResult);
-//
-//   const genreListResult = await genreList();
-//   console.log(genreListResult);
-//
-//   const genreResult = await genre("vampire", 1);
-//   console.log(genreResult);
-//
-//   const infoResult = await info("https://otakudesu.blog/anime/onii-oshii-sub-indo/");
-//   console.log(infoResult);
-//
-//   const watchResult = await watch("https://otakudesu.blog/episode/onchnosmhi-episode-12-sub-indo/");
-//   console.log(watchResult);
-//
-//   const upcomingResult = await upcoming();
-//   console.log(upcomingResult);
-// })();
+(async () => {
+  // const homeResult = await home();
+  // console.log(JSON.stringify(homeResult, null, 2));
+  // const searchResult = await search("mahiro");
+  // console.log(JSON.stringify(searchResult, null, 2));
+  // const genreListResult = await genreList();
+  // console.log(JSON.stringify(genreListResult, null, 2));
+  // const genreResult = await genre("romance", 1);
+  // console.log(JSON.stringify(genreResult, null, 2));
+  // const infoResult = await info(
+  //   "https://otakudesu.blog/anime/onii-oshii-sub-indo/",
+  // );
+  // console.log(JSON.stringify(infoResult, null, 2));
+  // const watchResult = await watch(
+  //   "https://otakudesu.blog/episode/onchnosmhi-episode-12-sub-indo/",
+  // );
+  // console.log(JSON.stringify(watchResult, null, 2));
+  // const upcomingResult = await upcoming();
+  // console.log(JSON.stringify(upcomingResult, null, 2));
+})();
