@@ -248,17 +248,64 @@ async function checkInbox(username) {
   };
 }
 
+async function inboxDetail(storageKey) {
+  if (!storageKey)
+    return {
+      success: false,
+      mess: "Storage key needed. example: 97ae0dxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+      pesan:
+        "Storage key diperlukan. contoh: 97ae0dxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    };
+
+  const getKey = await fetch(
+    `https://akunlama.com/api/getKey?region=us&key=${storageKey}`,
+    {
+      method: "GET",
+    },
+  );
+
+  const getHtml = await fetch(
+    `https://akunlama.com/api/getHtml?region=us&key=${storageKey}`,
+    {
+      method: "GET",
+    },
+  );
+
+  if (!getHtml.ok) {
+    throw new Error(`getHtml HTTP ${getHtml.status}`);
+  }
+
+  if (!getKey.ok) {
+    throw new Error(`getKey HTTP ${getKey.status}`);
+  }
+
+  const htmlData = await getHtml.text();
+  const keyData = await getKey.json();
+
+  return {
+    success: true,
+    key: keyData,
+    html: htmlData,
+  };
+}
+
 /* EXAMPLE USAGE */
 (async () => {
   // GET NEW EMAIL
-  //   const email = await getNewEmail();
-  //   console.log(JSON.stringify(email, null, 2));
+  // const email = await getNewEmail();
+  // console.log(JSON.stringify(email, null, 2));
   //
   // GET NEW EMAIL WITH YOUR OWN USERNAME
   //   const myEmail = await getNewEmail("your Username");
   //   console.log(JSON.stringify(myEmail, null, 2));
   //
   // CHECK INBOX
-  //   const res = await checkInbox("your username");
-  //   console.log(JSON.stringify(res, null, 2));
+  // const res = await checkInbox("your Username");
+  // console.log(JSON.stringify(res, null, 2));
+  //
+  // GET DETAIL INBOX INFO
+  // const inbox = await inboxDetail(
+  //   "97ae0dd7-e7f5-47bd-8b1c-97ae0dxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+  // );
+  // console.log(JSON.stringify(inbox, null, 2));
 })();
