@@ -1,5 +1,5 @@
 /*
- * AlightMotion Premium Generator
+ * AlightMotion Premium Generator V1
  *
  * Author: Ryusei Hoshino (https://github.com/dev-ryusei-hoshino)
  * Base: https://am.hinatasoft.com/
