@@ -43,5 +43,7 @@ async function getEmailAndInbox(name) {
     return { success: false, mess: e.message };
   }
 }
+/*
 const res = await getEmailAndInbox("Iroha Jane 123");
 console.log(res);
+*/
